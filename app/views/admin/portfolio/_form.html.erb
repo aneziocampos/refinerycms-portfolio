@@ -22,7 +22,7 @@
     <%= f.required_label t('.title') %>
     <%= f.text_field :title, :class => "larger widest" %>
   </div>
-  <% unless RefinerySetting.find_or_set(:portfolio_has_no_index, true)%>
+  <% unless Refinery::Setting.find_or_set(:portfolio_has_no_index, true)%>
     <div class='field'>
       <%= f.label :image -%>
       <%= render :partial => "/shared/admin/image_picker", :locals => {
